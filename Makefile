@@ -67,6 +67,7 @@ LIBFT = \
 	ft_itoa_base \
 	ft_absolute \
 	ft_wrdcnt \
+	ft_lstbadd \
 
 VPATH = \
 	./drivers/ \
