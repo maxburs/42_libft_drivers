@@ -110,13 +110,16 @@ all: $(NAMES)
 %.out: %_driver.c ./answers/libft.a ./drivers/helpers/helpers.a
 	gcc $(CFLAGS) $(LIBRARIES) $^ -o $@
 
-./answers/libft.a:
+./answers/libft.a: force
 	cd ./answers && $(MAKE) $(MAKEFLAGS)
 
 helpers: $(HELPERS)
 
-./drivers/helpers/helpers.a:
+./drivers/helpers/helpers.a: force
 	cd ./drivers/helpers && $(MAKE) $(MAKEFLAGS)
+
+force:
+	true
 
 clean:
 	cd ./answers && $(MAKE) fclean
