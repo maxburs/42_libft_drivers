@@ -6,7 +6,7 @@
 
 void	test(char *str)
 {
-	char *dup = string_clone((char*)str);
+	char *dup = ft_strdup((char*)str);
 	size_t len = strlen(dup);
 
 	printf("   -----\n");

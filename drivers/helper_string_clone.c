@@ -7,7 +7,7 @@ void	test(char *copy_me)
 
 	printf("%s\n", copy_me);
 	printf("->\n");
-	if (!(new_str = string_clone(copy_me)))
+	if (!(new_str = ft_strdup(copy_me)))
 	{
 		printf("COPY FAILED\n");
 		return ;

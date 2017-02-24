@@ -5,7 +5,7 @@
 
 void	test(const char *str)
 {
-	char *dup = string_clone((char*)str);
+	char *dup = ft_strdup((char*)str);
 	printf("deleting: %s\n", dup);
 	ft_strdel(&dup);
 	printf("result: %s", dup);

@@ -10,7 +10,7 @@ void	print_char(unsigned int i, char *c)
 
 void	test(char *str)
 {
-	char *dup = string_clone(str);
+	char *dup = ft_strdup(str);
 
 	printf("   priting characters from:\n");
 	printf("%s\n", dup);

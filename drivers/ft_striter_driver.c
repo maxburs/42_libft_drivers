@@ -9,7 +9,7 @@ void	print_char(char *c)
 
 void	test(char *str)
 {
-	char *dup = string_clone(str);
+	char *dup = ft_strdup(str);
 
 	printf("   priting characters from:\n");
 	printf("%s\n", dup);

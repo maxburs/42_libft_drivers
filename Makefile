@@ -94,7 +94,7 @@ LIBFT += $\
 
 NAMES = $(addsuffix .out,$(LIBFT))
 
-HELPERS = string_clone.out
+HELPERS = ft_strdup.out
 
 CFLAGS = -Wall -Wextra -Werror
 

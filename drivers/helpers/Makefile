@@ -1,7 +1,6 @@
 NAME = helpers.a
 
-OBJ = string_clone.o\
-	print_stuff.o
+OBJ = print_stuff.o
 
 CFLAGS = -Wall -Wextra -Werror 
 

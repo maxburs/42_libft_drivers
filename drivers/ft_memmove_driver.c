@@ -30,7 +30,7 @@ void	test(char *str, int dst, int src, size_t size)
 {
 	char *clone;
 
-	clone = string_clone(str);
+	clone = ft_strdup(str);
 
 	printf("   -----\n");
 	printf("\n");
@@ -48,7 +48,7 @@ void	test(char *str, int dst, int src, size_t size)
 	printf("   memmove result: \n");
 	printf("%s\n", clone);
 
-	clone = string_clone(str);
+	clone = ft_strdup(str);
 
 	ft_memmove(clone + dst, clone + src, size);
 

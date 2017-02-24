@@ -11,7 +11,7 @@ char	increment(unsigned int i, char c)
 
 void	test(char *str)
 {
-	char *dup = string_clone(str);
+	char *dup = ft_strdup(str);
 	char *new;
 	size_t len = strlen(dup);
 
