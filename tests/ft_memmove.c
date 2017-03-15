@@ -1,7 +1,6 @@
 #include <libft.h>
 #include <stdio.h>
 #include <string.h>
-#include <helpers.h>
 
 void	print_stuff(char *str, size_t len)
 {

@@ -1,10 +1,10 @@
 #include <libft.h>
-#include <helpers.h>
 #include <stdio.h>
 
-void	print_char(char *c)
+void	print_char(unsigned int i, char *c)
 {
 	printf("%c", *c);
+	printf("(%d) ", i);
 }
 
 void	test(char *str)
@@ -13,7 +13,7 @@ void	test(char *str)
 
 	printf("   priting characters from:\n");
 	printf("%s\n", dup);
-	ft_striter(dup, &print_char);
+	ft_striteri(dup, &print_char);
 	printf("\n");
 }
 

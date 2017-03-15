@@ -1,5 +1,4 @@
 #include <libft.h>
-#include <helpers.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -25,13 +24,15 @@ void	test(char *const str1, char *const str2, size_t str1_len, size_t n)
 	printf("   -----\n");
 	printf("\n");
 	printf("   strings:\n");
-	print_stuff(str1_clone, str1_len);
+	//print_stuff(str1_clone, str1_len);
+	//TODO: REPLACE PRINT_STUFF
 	printf("%s\n", str2);
 	printf("\n");
 
 	printf("   strncat:\n");
 	str1_clone = strncat(str1_clone, str2, n);
-	print_stuff(str1_clone, str1_len);
+	//print_stuff(str1_clone, str1_len);
+	//TODO: REPLACE PRINT_STUFF
 	printf("\n");
 
 	//reclone str1
@@ -39,7 +40,8 @@ void	test(char *const str1, char *const str2, size_t str1_len, size_t n)
 
 	printf("   ft_strncat:\n");
 	str1_clone = ft_strncat(str1_clone, str2, n);
-	print_stuff(str1_clone, str1_len);
+	//print_stuff(str1_clone, str1_len);
+	//TODO: REPLACE PRINT_STUFF
 	printf("\n");
 }
 int		main(void)

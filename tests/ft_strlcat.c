@@ -1,5 +1,4 @@
 #include <libft.h>
-#include <helpers.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -26,14 +25,16 @@ void	test(char *const str1, char *const str2, size_t str1_len, size_t act)
 	printf("   -----\n");
 	printf("\n");
 	printf("   strings:\n");
-	print_stuff(str1_clone, act);
+	//print_stuff(str1_clone, act);
+	//TODO: REPLACE PRINT_STUFF
 	printf("%s\n", str2);
 	printf("\n");
 
 	// strlcat doesn't exist on ubuntu by default D:
 	printf("   strlcat:\n");
 	length = strlcat(str1_clone, str2, str1_len);
-	print_stuff(str1_clone, act);
+	//print_stuff(str1_clone, act);
+	//TODO: REPLACE PRINT_STUFF
 	printf("   length: %zu\n", length);
 	printf("\n");
 
@@ -42,7 +43,8 @@ void	test(char *const str1, char *const str2, size_t str1_len, size_t act)
 
 	printf("   ft_strlcat:\n");
 	length = ft_strlcat(str1_clone, str2, str1_len);
-	print_stuff(str1_clone, act);
+	//print_stuff(str1_clone, act);
+	//TODO: REPLACE PRINT_STUFF
 	printf("   length: %zu\n", length);
 	printf("\n");
 }
