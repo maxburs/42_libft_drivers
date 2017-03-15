@@ -98,7 +98,7 @@ HELPERS = ft_strdup.out
 
 CFLAGS = -Wall -Wextra -Werror
 
-LIBRARIES = -I ./answers -I ./drivers/helpers
+LIBRARIES = -I ./libft -I ./drivers/helpers
 
 ifdef DEBUG
 CFLAGS += -g
@@ -107,11 +107,11 @@ endif
 
 all: $(NAMES)
 
-%.out: %_driver.c ./answers/libft.a ./drivers/helpers/helpers.a
+%.out: %_driver.c ./libft/libft.a ./drivers/helpers/helpers.a
 	gcc $(CFLAGS) $(LIBRARIES) $^ -o $@
 
-./answers/libft.a: force
-	cd ./answers && $(MAKE) $(MAKEFLAGS)
+./libft/libft.a: force
+	cd ./libft && $(MAKE) $(MAKEFLAGS)
 
 helpers: $(HELPERS)
 
@@ -122,7 +122,7 @@ force:
 	true
 
 clean:
-	cd ./answers && $(MAKE) fclean
+	cd ./libft && $(MAKE) fclean
 	cd ./drivers/helpers && $(MAKE) fclean
 fclean: clean
 	rm -f $(NAMES)
@@ -130,4 +130,4 @@ fclean: clean
 	rm -f $(HELPERS)
 re: fclean all
 
-.PHONY: all helpers clean fclean re ./answers/libft.a ./drivers/helpers/helpers.a
+.PHONY: all helpers clean fclean re ./libft/libft.a ./drivers/helpers/helpers.a
