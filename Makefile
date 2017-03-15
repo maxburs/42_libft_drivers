@@ -1,16 +1,11 @@
 SRC := $(shell find ./tests -name '*.c' -printf '%f\n')
 
-
-
 SRC := $(filter-out \
 	ft_strnstr.c \
 	ft_strlcat.c \
 	,$(SRC))
 
 NAME := $(SRC:.c=.out)
-
-
-
 
 # no tests for:
 # strplace
@@ -41,7 +36,7 @@ all: $(NAME)
 	cd ./libft && $(MAKE)
 
 force:
-	true
+	@true
 
 clean:
 	cd ./libft && $(MAKE) fclean
