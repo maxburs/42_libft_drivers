@@ -10,11 +10,11 @@ void	test(char *str, int c, size_t n)
 	printf("   inside of: %s\n", str);
 	printf("\n");
 	printf("   memchr result:\n");
-	printf("%s\n", memchr(str, c, n));
+	printf("%s\n", (char*)memchr(str, c, n));
 	printf("\n");
 
 	printf("   ft_memchr result:\n");
-	printf("%s\n", ft_memchr(str, c, n));
+	printf("%s\n", (char*)ft_memchr(str, c, n));
 	printf("\n");
 }
 

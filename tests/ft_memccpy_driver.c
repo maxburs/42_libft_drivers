@@ -37,7 +37,7 @@ void	test(char *cpy_me, size_t amt, int c)
 	printf("   memcpy:\n");
 	print_stuff(str, amt + 1);
 	printf("->\n");
-	printf("return value: %s\n", memccpy(str, cpy_me, c, amt));
+	printf("return value: %s\n", (char*)memccpy(str, cpy_me, c, amt));
 	print_stuff(str, amt + 1);
 	printf("\n");
 
@@ -46,7 +46,7 @@ void	test(char *cpy_me, size_t amt, int c)
 	printf("   ft_memcpy:\n");
 	print_stuff(str, amt + 1);
 	printf("->\n");
-	printf("return value: %s\n", ft_memccpy(str, cpy_me, c, amt));
+	printf("return value: %s\n", (char*)ft_memccpy(str, cpy_me, c, amt));
 	print_stuff(str, amt + 1);
 	printf("\n");
 }

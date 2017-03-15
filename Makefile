@@ -18,11 +18,9 @@ LIBFT = \
 	ft_strncpy \
 	ft_strcat \
 	ft_strncat \
-	ft_strlcat \
 	ft_strchr \
 	ft_strrchr \
 	ft_strstr \
-	ft_strnstr \
 	ft_strcmp \
 	ft_strncmp \
 	ft_atoi \
@@ -69,9 +67,14 @@ LIBFT = \
 	ft_wrdcnt \
 	ft_lstbadd \
 
+#doesn't work on ubuntu
+#LIBFT += \
+#	ft_strlcat \
+#	ft_strnstr \
+
 VPATH = \
-	./drivers/ \
-	./drivers/listm/ \
+	./tests/ \
+	./tests/listm/ \
 
 # ./listm/
 LIBFT += $\
@@ -98,7 +101,7 @@ HELPERS = ft_strdup.out
 
 CFLAGS = -Wall -Wextra -Werror
 
-LIBRARIES = -I ./libft -I ./drivers/helpers
+LIBRARIES = -I ./libft -I ./tests/helpers
 
 ifdef DEBUG
 CFLAGS += -g
@@ -107,7 +110,7 @@ endif
 
 all: $(NAMES)
 
-%.out: %_driver.c ./libft/libft.a ./drivers/helpers/helpers.a
+%.out: %_driver.c ./libft/libft.a ./tests/helpers/helpers.a
 	gcc $(CFLAGS) $(LIBRARIES) $^ -o $@
 
 ./libft/libft.a: force
@@ -115,19 +118,19 @@ all: $(NAMES)
 
 helpers: $(HELPERS)
 
-./drivers/helpers/helpers.a: force
-	cd ./drivers/helpers && $(MAKE) $(MAKEFLAGS)
+./tests/helpers/helpers.a: force
+	cd ./tests/helpers && $(MAKE) $(MAKEFLAGS)
 
 force:
 	true
 
 clean:
 	cd ./libft && $(MAKE) fclean
-	cd ./drivers/helpers && $(MAKE) fclean
+	cd ./tests/helpers && $(MAKE) fclean
 fclean: clean
 	rm -f $(NAMES)
 	rm -rf $(addsuffix .dSYM,$(NAMES))
 	rm -f $(HELPERS)
 re: fclean all
 
-.PHONY: all helpers clean fclean re ./libft/libft.a ./drivers/helpers/helpers.a
+.PHONY: all helpers clean fclean re ./libft/libft.a ./tests/helpers/helpers.a

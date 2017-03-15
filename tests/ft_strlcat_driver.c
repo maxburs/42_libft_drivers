@@ -30,6 +30,7 @@ void	test(char *const str1, char *const str2, size_t str1_len, size_t act)
 	printf("%s\n", str2);
 	printf("\n");
 
+	// strlcat doesn't exist on ubuntu by default D:
 	printf("   strlcat:\n");
 	length = strlcat(str1_clone, str2, str1_len);
 	print_stuff(str1_clone, act);
