@@ -8,18 +8,18 @@ int		main(void)
 {
 	t_lstr *list = NULL;
 
-	ft_lstr_print(list);
+	lstr_print(list);
 
-	ft_lstr_print(list);
+	lstr_print(list);
 
-	ft_lstr_add(&list, "cat", true);
-	ft_lstr_print(list);
-	ft_lstr_add(&list, "pat", true);
-	ft_lstr_print(list);
-	ft_lstr_add(&list, "sat", true);
-	ft_lstr_print(list);
-	ft_lstr_add(&list, "zat", true);
-	ft_lstr_print(list);
-	ft_lstr_add(&list, "mat", true);
-	ft_lstr_print(list);
+	lstr_add(&list, "cat", true);
+	lstr_print(list);
+	lstr_add(&list, "pat", true);
+	lstr_print(list);
+	lstr_add(&list, "sat", true);
+	lstr_print(list);
+	lstr_add(&list, "zat", true);
+	lstr_print(list);
+	lstr_add(&list, "mat", true);
+	lstr_print(list);
 }

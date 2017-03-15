@@ -9,20 +9,20 @@ int		main(void)
 	t_lstr	*list = NULL;
 	char	*str;
 
-	ft_lstr_print(list);
+	lstr_print(list);
 
-	ft_lstr_add(&list, "cat", true);
-	ft_lstr_print(list);
-	ft_lstr_add(&list, "pat", true);
-	ft_lstr_print(list);
-	ft_lstr_add(&list, "sat", true);
-	ft_lstr_print(list);
-	ft_lstr_add(&list, "zat", true);
-	ft_lstr_print(list);
-	ft_lstr_add(&list, "mat", true);
-	ft_lstr_print(list);
-	str = ft_lstr_finish(&list);
+	lstr_add(&list, "cat", true);
+	lstr_print(list);
+	lstr_add(&list, "pat", true);
+	lstr_print(list);
+	lstr_add(&list, "sat", true);
+	lstr_print(list);
+	lstr_add(&list, "zat", true);
+	lstr_print(list);
+	lstr_add(&list, "mat", true);
+	lstr_print(list);
+	str = lstr_finish(&list);
 	ft_putstr(str);
 	ft_putstr("\n");
-	ft_lstr_print(list);
+	lstr_print(list);
 }

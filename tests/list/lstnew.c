@@ -3,23 +3,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void	test(char *str, size_t size)
+void	test(char *str)
 {
 	t_list	*list;
 
-	list = ft_lstnew(str, size);
-	ft_lstprint(list);
+	list = lstnew(str);
+	lstprint(list);
 	free(list);
 }
 
 int		main(void)
 {
-	test("cat", 4);
-	test(NULL, 5);
+	test("cat");
+	test(NULL);
 	char *data = "hello, i'm a data";
 	//data[2] = '2';
 	printf("does it make it here\n");
-	t_list *l = ft_lstnew(data, strlen(data) + 1);
+	t_list *l = lstnew(data);
 
 	if (!strcmp(data, l->content))
 	{

@@ -3,14 +3,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void	del(void *data, size_t size)
+void	del(void *data)
 {
 	printf("   deleing: %s\n", (char*)data);
-	printf("   size: %zu\n", size);
 	free(data);
 }
 
-void	test(char *str, size_t size)
+void	test(char *str)
 {
 	t_list	*list;
 	char	*dup = NULL;
@@ -18,11 +17,11 @@ void	test(char *str, size_t size)
 	if (str)
 		dup = ft_strdup(str);
 
-	list = ft_lstnew(dup, size);
-	ft_lstprint(list);
-	ft_lstdelone(&list, &del);
-	ft_lstprint(list);
-	printf("%s\n", dup);
+	list = lstnew(dup);
+	lstprint(list);
+	lstdelone(&list, &del);
+	lstprint(list);
+	//printf("%s\n", dup);
 	if (list == NULL)
 		printf("link is now null\n");
 	else
@@ -31,6 +30,6 @@ void	test(char *str, size_t size)
 
 int		main(void)
 {
-	test("cat", 4);
-	test(NULL, 5);
+	test("cat");
+	test(NULL);
 }
