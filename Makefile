@@ -1,13 +1,17 @@
-SRC := $(shell find ./tests -name '*.c' -printf '%f\n')
+ifndef DIR
+	DIR = ./tests
+endif
 
-SRC := $(filter-out \
+RAW_SRC = $(shell find $(DIR) -name '*.c' -printf '%f\n')
+
+SRC = $(filter-out \
 	ft_strnstr.c \
 	ft_strlcat.c \
-	,$(SRC))
+	,$(RAW_SRC))
 
 NAME := $(SRC:.c=.out)
 
-VPATH := $(shell find ./tests -type d)
+VPATH := $(shell find $(DIR) -type d)
 
 CFLAGS = -Wall -Wextra -Werror
 
