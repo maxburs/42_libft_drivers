@@ -7,20 +7,6 @@ SRC := $(filter-out \
 
 NAME := $(SRC:.c=.out)
 
-# no tests for:
-# strplace
-# lstprint
-# memdup
-# wrdcnt
-# ft_strndup
-# lstmprint
-# lstmadd
-# lstmnew
-# utf_32_8
-# utf_16_32
-# utf_16_8
-# putnstr
-
 VPATH := $(shell find ./tests -type d)
 
 CFLAGS = -Wall -Wextra -Werror
