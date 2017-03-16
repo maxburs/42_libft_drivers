@@ -2,7 +2,7 @@ ifndef DIR
 	DIR = ./tests
 endif
 
-RAW_SRC = $(shell find $(DIR) -name '*.c' -printf '%f\n')
+RAW_SRC = $(shell find $(DIR) -name '*.c' -exec basename {} \;)
 
 SRC = $(filter-out \
 	ft_strnstr.c \
